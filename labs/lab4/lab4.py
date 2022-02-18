@@ -59,7 +59,7 @@ def Valentines():
     Blood_2.draw(win)
 
     for i in range(38):
-        Arrow.move(-10,0)
+        Arrow.move(-10,0.02)
         time.sleep(0.01)
 
     for j in range(100):
