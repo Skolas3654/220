@@ -1,0 +1,1 @@
+<_io.TextIOWrapper name='test' mode='r' encoding='cp1252'>
