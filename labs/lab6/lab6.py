@@ -3,6 +3,7 @@ import math
 import graphics
 from graphics import *
 
+#sets height
 height = 300
 width = 400
 
