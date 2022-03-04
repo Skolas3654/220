@@ -16,4 +16,5 @@ def quadtradic(a,b,c):
     print(root_1)
     print(root_2)
 
-quadtradic(1,10,3)
+
+
