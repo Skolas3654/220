@@ -10,7 +10,8 @@ def encode(message, key):
     encoded_message = "".join(encoded_message)
     return  encoded_message
 
-def encoder_better(string, k):
+def encoder_better(string, key):
+    key = key * 26
     encrypt_text = []
     for i in range(len(string)):
         x = (ord(string[i]) + ord(k[i])) % 26
