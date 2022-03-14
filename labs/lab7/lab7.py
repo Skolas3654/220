@@ -22,7 +22,7 @@ def weighted_average(in_file_name, out_file_name):
         average = round(average, 1)
 
         if weight_amount == 100:
-            print(names + "'s average", average, file=out_file_name)
+            print(names + "'s average:", average, file=out_file_name)
             class_average = class_average + average
         elif weight_amount < 100:
             print("Error: The weights are less than 100.", file=out_file_name)
