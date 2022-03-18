@@ -26,17 +26,19 @@ def first_while():
 def is_game_over(player_1_points,player_2_points):
     over_15 = player_1_points >= 15 or player_2_points >= 15
     won_by_two = abs(player_1_points - player_2_points) >= 2
-    if over_15 and won_by_two:
+    skunked = player_1_points >= 7 and player_2_points <= 0 or player_2_points >= 7 and player_1_points == 0
+    if (over_15 and won_by_two) or skunked:
         return True
     return False
 #print(is_game_over(15,15))
 
-player_1 = 10
-player_2 = 12
+player_1 = 0
+player_2 = 0
 print(player_1, player_2)
 while not is_game_over(player_1,player_2):
     one_points, two_points = eval(input("Enter two points"))
     player_1 = player_1 + one_points
     player_2 = player_2 + two_points
     print(player_1, player_2)
+    break
 print("Game Over")
