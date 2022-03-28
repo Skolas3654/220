@@ -137,6 +137,8 @@ def play(board):
             answer = input("Game is over, hit y to play again")
             if answer == "y":
                 play(build_board())
+            else:
+                exit()
 
 def main():
     play(build_board())
