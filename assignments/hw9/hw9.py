@@ -71,34 +71,33 @@ def draw_hangman(remaining_guesses, win):
 def play_graphics(secret_word):
     height = 500
     width = 500
+    win = GraphWin("Hangman", width, height)
 
     word_list = get_words('words.txt')
-
     secret_word = get_random_word(word_list)
 
-    win = GraphWin("Hangman",width,height)
     entry_box_text = Text(Point(width/4,350),'Guess a letter: ')
     entry_box = Entry(Point(width/2,350),10)
 
-
     guessed_letters = []
     remaining_guesses = 6
+
     display_word = make_hidden_secret(secret_word, guessed_letters)
     display_word_text = Text(Point(width / 2,300), display_word)
+
     guesses = make_hidden_secret(secret_word, guessed_letters)
 
     guesses_text = Text(Point(width / 2,420), guessed_letters)
-    guesses_text_pre = Text(Point(width / 2,400), "Letters already used:")
+    pre_guesses_text = Text(Point(width / 2,400), "Letters already used:")
 
     entry_box_text.draw(win)
     entry_box.draw(win)
     display_word_text.draw(win)
     guesses_text.draw(win)
-    guesses_text_pre.draw(win)
+    pre_guesses_text.draw(win)
 
     while not won(guesses) and remaining_guesses > 0:
         win.getMouse()
-
         player_guess = entry_box.getText()
 
         if already_guessed(player_guess, guessed_letters):
@@ -118,7 +117,7 @@ def play_graphics(secret_word):
             draw_hangman(remaining_guesses, win)
             entry_box.setText("")
     entry_box.undraw()
-    guesses_text_pre.undraw()
+    pre_guesses_text.undraw()
     entry_box_text.undraw()
 
     if won(guesses):
@@ -134,6 +133,9 @@ def play_graphics(secret_word):
 
 
 #play_graphics('')
+
+
+
 def play_command_line(secret_word):
 
     guessed_letters = []
