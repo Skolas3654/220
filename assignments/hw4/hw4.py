@@ -39,6 +39,7 @@ def squares():
         shape = Rectangle(Point(click.getX()-25, click.getY()-25), Point(click.getX()+25, click.getY()+25))
         shape.setOutline("red")
         shape.setFill("red")
+        shape.ge
 
         shape.draw(win)
 
