@@ -132,7 +132,7 @@ def play_graphics(secret_word):
 
 
 
-#play_graphics('')
+play_graphics('')
 
 
 
