@@ -1,6 +1,13 @@
+'''
+#Andreas Dilling
+'''
+
 from sales_person import SalesPerson
 
 class SalesForce:
+    '''
+    Class
+    '''
     def __init__(self):
         self.sales_people = []
 
